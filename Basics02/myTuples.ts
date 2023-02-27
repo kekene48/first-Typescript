@@ -16,4 +16,4 @@ const user1: User = [2, '66']
 //issue ---- const variable can be changed
 user1[1] = 'mickey'
 
-//issue ---- arraymethods like pop, puh, slice, unshift can work on tuples, which goes against the idewa of tuples
+//issue ---- arraymethods like pop, push, slice, unshift can work on tuples, which goes against the idewa of tuples
