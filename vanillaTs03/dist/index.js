@@ -1,3 +1,4 @@
+"use strict";
 // class User {
 //     email: string
 //     name: string
@@ -9,35 +10,31 @@
 //         this.name = name;
 //     }
 // }
-
-
 // ----------------Another way of declaring class----------------
 class User {
-    private _courseCount = 1
-    readonly city: string = 'Lagos'
-    constructor(
-        public name: string,
-        public email: string,
-    ) {}
-    private deleteToken() {
-        console.log('Token deleted')
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+        this._courseCount = 1;
+        this.city = 'Lagos';
     }
-    get getAppleId(): string {
-        return `Apple${this.email}`
+    deleteToken() {
+        console.log('Token deleted');
     }
-    get courseCount(): number {
+    get getAppleId() {
+        return `Apple${this.email}`;
+    }
+    get courseCount() {
         return this._courseCount;
     }
     set courseCount(courseNum) {
-        if(courseNum < this._courseCount) {
-            throw new Error('course number should be larger than 1')
-        } 
-        this._courseCount = courseNum
+        if (courseNum < this._courseCount) {
+            throw new Error('course number should be larger than 1');
+        }
+        this._courseCount = courseNum;
     }
 }
-
-
-const user1 = new User('Kelvin', 'kelvin@gmail.com')
+const user1 = new User('Kelvin', 'kelvin@gmail.com');
 //now user1 can either have a city or not
 //user1.city cannot be accessible outside of the User class
 // user1.city
