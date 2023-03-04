@@ -38,7 +38,7 @@ identity4<Phone>({model: 'A9', iud: 17-9, length: '.6.5 Inches'})
 function getSearchedProduct<T>(products: T[]): T {
     //do some database operations
     const myIndex = 3;
-    return products[myIndex]
+    return products[myIndex] 
 }
 
 // the same function above as an arrow function

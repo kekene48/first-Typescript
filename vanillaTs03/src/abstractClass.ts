@@ -10,7 +10,7 @@ abstract class TakePhotograph {
         return 60000
     }
 }
-
+ 
 class Snapchat extends TakePhotograph {
     constructor(
         public cameraMode: string,
