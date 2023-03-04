@@ -7,7 +7,7 @@ abstract class TakePhotograph {
     // abstract getSepia(): void
     getReelTime(): number {
         //some complex calculations
-        return 17
+        return 60000
     }
 }
 
@@ -27,5 +27,5 @@ class Snapchat extends TakePhotograph {
 
 }
 
-// const kk = new Snapchat('test', 'test2')
-
+const kk = new Snapchat('test', 'test2', 17)
+kk.getReelTime()
