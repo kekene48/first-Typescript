@@ -49,3 +49,41 @@ const getMoresearchedProducts = <T,>(products: T[]): T => {
     return products[myIndex]
 }
 //the <T,> as seen above is used to differentiate Generics from normal HTML tags, no errors would occur
+
+
+interface Database {
+    conection: string
+    username: string
+    password: string
+}
+
+function anotherFunction<T, U extends Database>(valone: T, valTwo: U): object {
+    return {
+        valOne: valone,
+        valTwo: valTwo
+    }
+}
+
+anotherFunction(3, {conection: '200 OK', username: 'zekey', password: 'zekeypassword'})
+
+//Generic classes
+interface Quiz {
+    name: string
+    type: string
+}
+
+interface Course {
+    name: string
+    subject: string
+    author: string
+}
+
+class sellables<T> {
+    public cart: T[] = [];
+
+    addToCart(product: T) {
+        this.cart.push(product)
+        return this.cart;
+    }
+}
+
